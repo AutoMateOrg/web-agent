@@ -2,48 +2,21 @@ import CarsList from "../components/CarsList"
 import Nav from "../components/Nav"
 import Footer from "../components/Footer"
 import Pagination from "../components/Pagination"
+import axios from "axios"
 
 export default function Cars(){
-    const cars = 
-        [
-            {
-                "id": 1,
-                "name": "Honda Civic",
-                "make": "Honda",
-                "description": "Description 1"
-            },
-            {
-                "id": 2,
-                "name": "Toyota Cross",
-                "make": "Toyota",
-                "description": "Description 2"
-            },
-            {
-                "id": 3,
-                "name": "Nissan Rogue",
-                "make": "Nissan",
-                "description": "Description 3"
-            },
-            {
-                "id": 4,
-                "name": "Honda Accord",
-                "make": "Honda",
-                "description": "Description 4"
-            },
-            {
-                "id": 5,
-                "name": "Toyota Camry",
-                "make": "Toyota",
-                "description": "Description 5"
-            },
-            {
-                "id": 6,
-                "name": "Nissan Altima",
-                "make": "Nissan",
-                "description": "Description 6"
-            }
-        ]
-    
+    var Arrays = new Array();
+    axios.get("http://localhost:4500/api/cars/list")
+        .then((res) => {
+            Arrays.push(res.data)
+            // console.log(Arrays)
+        })
+
+    console.log(Arrays)
+    const renderedCars = 
+    Arrays.map((array: any) => {
+        return <CarsList key={array.id} name={array.name} year={array.data.year} make={array.data.make} price={array.data.price}/>
+    })
     return (
         <div>
             <Nav />
@@ -62,7 +35,8 @@ export default function Cars(){
             <div className="album py-5 bg-body-tertiary">
                 <div className="container">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                        {cars.map((car: any) => <CarsList key={car.id} name={car.name} description={car.description} />)}
+                        {/* { cars.map((car: any) => <CarsList key={car.id} name={car.name} year={car.year} mileage={car.mileage} make={car.make} price={car.price}/>)} */}
+                        {renderedCars}
                     </div>
                 </div>
                 <br />
@@ -74,5 +48,7 @@ export default function Cars(){
             <Footer />
         </div>
     )
-} 
+}
+
+
 
