@@ -1,23 +1,15 @@
 import automate from "../assets/automate.png";
 import { NavLink } from "react-router-dom";
-import UserBadge from "./UserBadge";
-import LoggingBadge from "./LoggingBadge";
-
-function isLoggedIn(signedIn: boolean) {
-    const loggedIn = signedIn;
-    if (loggedIn) {
-        return (
-            <UserBadge/>
-        )
-    } else {
-        return (
-            <LoggingBadge />
-        )
-        
-    }
-}
+import Badge from "./Badge";
+import { useEffect } from "react";
+import axios from "axios";
+import useRequest from "../hooks/use-request";
 
 export default function Nav() {
+    useEffect(() => {
+        const currentUser = useRequest();
+        console.log(currentUser);
+    })
     return (
         <nav className="navbar navbar-expand-lg bg-dark bg-body-terti ary" data-bs-theme="dark">
             <div className="container-fluid">
@@ -48,10 +40,8 @@ export default function Nav() {
                         </ul>
                     </li>    
                 </ul>
-                
-                {isLoggedIn(false)}
-                
                 </div>
+                <Badge currentUser="null" />
             </div>
             
         </nav>

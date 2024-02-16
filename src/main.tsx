@@ -7,12 +7,19 @@ import Cars from "./routes/Cars.tsx"
 import Contact from "./routes/Contact.tsx"
 import About from "./routes/About.tsx"
 import Signup from "./routes/Signup.tsx"
-import CarDetail from "./components/CarDetail.tsx"
+import Signout from "./routes/Signout.tsx"
+import Home from "./routes/Home.tsx"
 
 const router = createBrowserRouter([
   { 
     path: "/", 
-    element: <App />
+    element: <App />,
+    children: [
+      { 
+        path: "home", 
+        element: <Home />
+      },
+    ]
   },
   { 
     path: "/signin", 
@@ -25,13 +32,6 @@ const router = createBrowserRouter([
   {
     path: "/cars",
     element: <Cars />
-    // children:
-    // [
-    //   {
-    //     path: "/:id",
-    //     element: <CarDetail />
-    //   }
-    // ]
   },
   {
     path: "/contact",
