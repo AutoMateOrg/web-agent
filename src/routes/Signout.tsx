@@ -1,11 +1,13 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 
-export default function Signout(){
-    const signout = async() => {
-        const navigate = useNavigate();
-        await axios.post("http://localhost:14374/api/users/signout");
-        navigate("/");
+const Signout = async() => {
+    const res = await axios.post("http://localhost:14374/api/users/signout");
+    // console.log(res);
+    if (res.status === 200) {
+        return redirect("/");
     }
-    return signout();
+    
 }
+
+export default Signout;

@@ -11,7 +11,6 @@ export default function Signin() {
     const navigate = useNavigate();
         
     async function handleAuthentication(e: any) {
-        console.log(formData);
         e.preventDefault();
         authenticate(formData.email, formData.password);
         navigate("/");

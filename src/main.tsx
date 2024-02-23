@@ -8,26 +8,24 @@ import Contact from "./routes/Contact.tsx"
 import About from "./routes/About.tsx"
 import Signup from "./routes/Signup.tsx"
 import Signout from "./routes/Signout.tsx"
-import Home from "./routes/Home.tsx"
+// import Home from "./routes/Home.tsx"
 
 const router = createBrowserRouter([
   { 
     path: "/", 
-    element: <App />,
-    children: [
-      { 
-        path: "home", 
-        element: <Home />
-      },
-    ]
+    element: <App />
   },
-  { 
+  {
     path: "/signin", 
     element: <Signin />
   },
   {
     path: "/signup",
     element: <Signup />
+  },
+  {
+    path: "/signout",
+    loader: Signout
   },
   {
     path: "/cars",

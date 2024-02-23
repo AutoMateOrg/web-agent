@@ -1,15 +1,19 @@
 import automate from "../assets/automate.png";
 import { NavLink } from "react-router-dom";
 import Badge from "./Badge";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import useRequest from "../hooks/use-request";
+// import useRequest from "../hooks/use-request";
 
 export default function Nav() {
+    const [currentUser, setCurrentUser] = useState(null);
+    const fetchCurrentUser = async () => {
+        const res = await axios.get("http://localhost:14374/api/users/currentuser", {withCredentials: true});
+        setCurrentUser(res.data.currentUser);
+    }
     useEffect(() => {
-        const currentUser = useRequest();
-        console.log(currentUser);
-    })
+        fetchCurrentUser();
+    })     
     return (
         <nav className="navbar navbar-expand-lg bg-dark bg-body-terti ary" data-bs-theme="dark">
             <div className="container-fluid">
@@ -40,8 +44,9 @@ export default function Nav() {
                         </ul>
                     </li>    
                 </ul>
+                <Badge currentUser={currentUser} />
                 </div>
-                <Badge currentUser="null" />
+               
             </div>
             
         </nav>
