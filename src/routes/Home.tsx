@@ -1,13 +1,13 @@
-const images = [
-    {
-        name: "porsche",
-        url: "https://automate-webresources.s3.ap-southeast-1.amazonaws.com/images/PCNA23_0489_a5_rgb.jpg"
-    },
-    {
-        name: "porsche",
-        url: "https://automate-webresources.s3.ap-southeast-1.amazonaws.com/images/S23_1934.jpg"
-    }
-]
+import porsche1 from '../assets/porsche1.jpg';
+import porsche2 from '../assets/porsche2.jpg';
+import porsche3 from '../assets/porsche3.jpg';
+import porsche4 from '../assets/porsche4.jpg';
+import porsche5 from '../assets/porsche5.jpg';
+import porsche6 from '../assets/porsche6.jpg';
+import porsche7 from '../assets/porsche7.jpeg';
+import bmw1 from '../assets/bmw1.jpg';
+import mercesdes1 from '../assets/mercedes1.jpg';
+import audi1 from '../assets/audi1.jpg';
 
 export default function Home() {
     return (
@@ -20,31 +20,31 @@ export default function Home() {
             </div>
             <div className="carousel-inner">
             <div className="carousel-item active">
-                <img src={images[0].url} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
+                <img src={porsche1} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
                 <div className="container">
                 <div className="carousel-caption text-start">
-                    <h1>Example headline.</h1>
-                    <p className="opacity-75">Some representative placeholder content for the first slide of the carousel.</p>
+                    <h1>Porsche</h1>
+                    <p className="opacity-75">Rev Up Your Style: Discover the Perfect Ride at Our Auto Dealership Today!</p>
                     <p><a className="btn btn-lg btn-primary" href="#">Sign up today</a></p>
                 </div>
                 </div>
             </div>
             <div className="carousel-item">
-            <img src={images[1].url} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
+            <img src={porsche2} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
                 <div className="container">
                 <div className="carousel-caption">
-                    <h1>Another example headline.</h1>
-                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <h1>Tri-Monsters</h1>
+                    <p>Unleash Your Drive: Find Your Next Adventure at Our Auto Dealership!</p>
                     <p><a className="btn btn-lg btn-primary" href="#">Learn more</a></p>
                 </div>
                 </div>
             </div>
             <div className="carousel-item">
-            <img src={images[0].url} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
+            <img src={porsche3} className="bd-placeholder-img" width="100%" height="70%" aria-hidden="true"/>
                 <div className="container">
                 <div className="carousel-caption text-end">
-                    <h1>One more for good measure.</h1>
-                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <h1>Exquisite.</h1>
+                    <p>Upgrade Your Journey: Explore Unrivaled Selections at Our Auto Dealership!</p>
                     <p><a className="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
                 </div>
                 </div>
@@ -64,21 +64,21 @@ export default function Home() {
 
             <div className="row">
             <div className="col-lg-4">
-                <img src={images[0].url}className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
+                <img src={porsche6} className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
                 <h2 className="fw-normal">Seattle</h2>
-                <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+                <p>Explore our vast selection of new and pre-owned cars, each meticulously inspected to ensure quality and reliability.</p>
                 <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
             </div>
             <div className="col-lg-4">
-                <img src={images[0].url}className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
+                <img src={porsche5} className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
                 <h2 className="fw-normal">Tacoma</h2>
-                <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+                <p>Our knowledgeable staff is dedicated to helping you find the perfect vehicle to suit your needs and lifestyle. Visit us today and drive away in your dream car.    </p>
                 <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
             </div>
             <div className="col-lg-4">
-                <img src={images[0].url}className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
+                <img src={porsche7} className="bd-placeholder-img rounded-circle" width="140" height="140" role="img" aria-label="Placeholder"/>
                 <h2 className="fw-normal">Bellvue</h2>
-                <p>And lastly this, the third column of representative placeholder content.</p>
+                <p>Whether you're seeking luxury, efficiency, or performance, we're here to make your car-buying experience seamless and enjoyable.</p>
                 <p><a className="btn btn-secondary" href="#">View details &raquo;</a></p>
             </div>
             </div>
@@ -92,7 +92,7 @@ export default function Home() {
                 that share our values. We believe in giving back to the place that has supported us for so many years, and we're proud to be a pillar of strength in our community.</p>
             </div>
             <div className="col-md-5">
-                <img src={images[1].url}className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
+                <img src={bmw1} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
             </div>
             </div>
             <hr className="featurette-divider"/>
@@ -106,7 +106,7 @@ export default function Home() {
                 offering the perfect blend of tradition and progress, speed and service.</p>
             </div>
             <div className="col-md-5 order-md-1">
-            <img src={images[0].url}className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
+            <img src={mercesdes1} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
             </div>
             </div>
 
@@ -120,7 +120,7 @@ export default function Home() {
                 Come discover why Automate is more than just a dealership; it's a family, a community, and a legacy of speed and service.</p>
             </div>
             <div className="col-md-5">
-            <img src={images[1].url}className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
+            <img src={porsche4} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
             </div>
             </div>
 
@@ -133,7 +133,7 @@ export default function Home() {
                 So, let your passion for cars and your commitment to your customers shine through, and you'll create an about us story that resonates with everyone who visits your dealership..</p>
             </div>
             <div className="col-md-5 order-md-1">
-            <img src={images[0].url}className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
+            <img src={audi1} className="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img"/>
             </div>
             </div>
             <hr className="featurette-divider"/>
